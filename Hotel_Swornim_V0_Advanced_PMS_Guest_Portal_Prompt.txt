@@ -1,6 +1,8 @@
 EXISTING PROJECT:
 Hotel Swornim Namobuddha
 
+CLONE THIS GITHUB REPO AND DO
+
 GitHub Repository:
 https://github.com/darefr/Hotel-Swornim-Namobuddha
 
