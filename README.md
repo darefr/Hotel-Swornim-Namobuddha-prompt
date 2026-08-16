@@ -1,1 +1,0 @@
-# Hotel-Swornim-Namobuddha-prompt
