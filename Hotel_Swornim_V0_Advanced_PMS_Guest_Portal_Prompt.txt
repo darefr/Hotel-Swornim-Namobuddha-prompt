@@ -1,0 +1,1005 @@
+EXISTING PROJECT:
+Hotel Swornim Namobuddha
+
+GitHub Repository:
+https://github.com/darefr/Hotel-Swornim-Namobuddha
+
+CRITICAL INSTRUCTIONS:
+This is an EXISTING working premium hotel website.
+
+DO NOT rebuild the website from scratch.
+DO NOT replace the existing public website design.
+DO NOT remove existing pages.
+DO NOT remove or break the existing Neon PostgreSQL database.
+DO NOT remove or break Better Auth.
+DO NOT remove or break Gmail SMTP / Nodemailer.
+DO NOT remove or break existing booking functionality.
+DO NOT remove or break the guest dashboard.
+DO NOT remove or break existing admin functionality.
+DO NOT remove or break the AI Concierge.
+
+FIRST inspect the entire repository and understand the existing:
+- database schema
+- Neon connection
+- Better Auth
+- users/accounts/sessions
+- bookings
+- rooms
+- reviews
+- admin implementation
+- email implementation
+- AI Concierge
+- shared booking actions
+- API routes
+- server actions
+- middleware/auth guards
+- environment variables
+
+Reuse existing architecture wherever possible.
+Do NOT create duplicate authentication systems.
+Do NOT create duplicate booking systems.
+Do NOT create a second database.
+Do NOT use fake JSON, localStorage, or in-memory storage.
+Neon PostgreSQL must remain the persistent source of truth.
+
+Use the EXISTING environment variables already configured in the project/Vercel.
+Do NOT ask me for passwords, database URLs, SMTP credentials, API keys, or environment variables.
+Do NOT stop and ask questions.
+Make sensible production-ready decisions yourself.
+
+============================================================
+GOAL
+============================================================
+
+Upgrade Hotel Swornim Namobuddha into a professional:
+
+HOTEL WEBSITE
++ BOOKING ENGINE
++ PREMIUM GUEST PORTAL
++ ADVANCED HOTEL PMS
++ CRM
++ CMS
++ REVIEWS SYSTEM
++ LOYALTY SYSTEM
++ ROLE-BASED ADMIN SYSTEM
++ REPORTING SYSTEM
+
+while preserving the existing public website and working functionality.
+
+============================================================
+1. DATABASE ARCHITECTURE
+============================================================
+
+Inspect the existing Neon schema first.
+
+Reuse existing tables whenever possible.
+Do NOT duplicate existing entities.
+Create only missing structures required for the new functionality.
+
+Support, where actually needed:
+
+- users/auth accounts/sessions/verifications
+- rooms, room types, room units, amenities
+- room rates and seasonal rates
+- availability
+- bookings and booking guests
+- booking/payment statuses
+- reviews and review responses
+- customer profiles and guest preferences
+- favorites/wishlist
+- loyalty accounts and loyalty transactions
+- offers/coupons/redemptions
+- staff/roles/permissions
+- notifications
+- contact messages
+- gallery
+- CMS content and SEO metadata
+- restaurant tables/reservations if applicable
+- audit/reporting data where useful
+
+Use proper primary keys, foreign keys, indexes, unique constraints and timestamps.
+
+Preserve existing user IDs and booking relationships.
+Do not delete existing data.
+
+============================================================
+2. PREMIUM GUEST PORTAL
+============================================================
+
+Create a premium luxury-hotel guest/member portal.
+
+Navigation:
+- Overview
+- My Bookings
+- Favorites
+- Loyalty
+- Reviews
+- Offers
+- Profile
+- Preferences
+- Security
+- Notifications
+
+Overview:
+- personalized welcome
+- guest name
+- verification status
+- membership status
+- loyalty points
+- upcoming stay
+- next check-in
+- booking status
+- quick actions
+
+Quick actions:
+- Book a Stay
+- View Booking
+- Contact Hotel
+- WhatsApp Hotel
+- Leave Review
+- View Offers
+
+Use real data only.
+
+My Bookings:
+- Upcoming
+- Current
+- Past
+- Cancelled
+- booking reference
+- room/image
+- dates
+- guests
+- total
+- booking/payment status
+- view details
+- contact hotel
+- WhatsApp
+- print/download confirmation where practical
+
+Booking Details:
+- Hotel Swornim Namobuddha
+- booking reference
+- guest information
+- room/image/amenities
+- check-in/check-out
+- nights
+- guests
+- price breakdown
+- total
+- payment/booking status
+- special requests
+- created date
+- contact hotel
+- WhatsApp
+- print/download confirmation
+
+Profile:
+- name
+- email
+- phone
+- WhatsApp
+- profile information
+- verification status
+- secure password change
+
+Preferences:
+- preferred room
+- bed preference
+- seating preference
+- dietary preference
+- special requests
+- communication preference
+
+Favorites:
+- rooms
+- offers
+- menu items where applicable
+Persist in Neon.
+
+============================================================
+3. LOYALTY
+============================================================
+
+Create a real loyalty system.
+
+Show:
+- current points
+- lifetime points
+- points earned
+- points redeemed
+- activity
+- membership level if implemented
+
+Possible levels:
+- Explorer
+- Voyager
+- Summit
+
+Only award points from real eligible business events.
+Do not award duplicate points.
+Use proper loyalty transactions.
+Validate redemption server-side.
+
+============================================================
+4. GUEST REVIEWS
+============================================================
+
+Authenticated guests can submit:
+- 1–5 star rating
+- review title
+- review text
+- booking reference where appropriate
+
+Statuses:
+- PENDING
+- PUBLISHED
+- HIDDEN
+
+Users can manage only their own reviews.
+Only published reviews appear publicly.
+
+============================================================
+5. ADVANCED ADMIN PMS
+============================================================
+
+Create a completely separate professional admin experience.
+
+It should feel like a real Hotel PMS, not a generic CRUD dashboard.
+
+Sidebar sections:
+
+OVERVIEW
+- Dashboard
+- Analytics
+
+FRONT DESK
+- Arrivals
+- Departures
+- Current Guests
+
+RESERVATIONS
+- Bookings
+- Booking Calendar
+- Availability
+- Waitlist
+
+PROPERTY
+- Rooms
+- Room Types
+- Rates
+- Amenities
+
+RESTAURANT
+- Tables
+- Reservations
+- Menu
+
+CUSTOMERS
+- Guests
+- Guest Profiles
+- Loyalty
+
+CONTENT
+- Gallery
+- Room Content
+- Offers
+- Blog/Content
+- SEO
+
+REPUTATION
+- Reviews
+
+COMMUNICATION
+- Messages
+- Notifications
+
+FINANCE
+- Payments
+- Revenue
+- Reports
+
+ADMINISTRATION
+- Staff
+- Roles & Permissions
+- Hotel Information
+- Settings
+
+Only include sections with real functionality.
+
+============================================================
+6. ADMIN DASHBOARD & ANALYTICS
+============================================================
+
+Use real Neon data.
+
+Show:
+- today's arrivals
+- today's departures
+- current guests
+- upcoming bookings
+- pending/confirmed/cancelled bookings
+- available/occupied rooms
+- occupancy
+- revenue
+- recent bookings
+- recent reviews
+
+Charts:
+- revenue by day/week/month
+- booking trends
+- occupancy trends
+- booking status distribution
+- room performance
+
+Do not use fake statistics.
+
+Calculate where possible:
+- occupancy rate
+- revenue
+- average booking value
+- total bookings
+- cancellation rate
+- room performance
+- average stay duration
+- repeat guest rate
+
+Traffic/conversion analytics only when real analytics data exists.
+
+============================================================
+7. FRONT DESK
+============================================================
+
+Create:
+- today's arrivals
+- today's departures
+- current stays
+- pending check-ins
+- pending check-outs
+
+Actions:
+- view guest
+- view booking
+- confirm
+- check-in
+- check-out
+- contact guest
+- WhatsApp guest
+
+Use server-side authorization.
+
+============================================================
+8. BOOKING MANAGEMENT
+============================================================
+
+Advanced booking management:
+- search
+- filters
+- sorting
+- date filters
+- room filters
+- guest search
+- reference search
+
+Actions:
+- view
+- edit
+- confirm
+- cancel
+- change booking status
+- change payment status
+- delete where appropriate
+- check-in
+- check-out
+
+Use confirmation dialogs for destructive actions.
+
+============================================================
+9. BOOKING CALENDAR & AVAILABILITY
+============================================================
+
+Create professional calendar/availability views.
+
+Use real Neon booking data.
+
+Statuses:
+- AVAILABLE
+- BOOKED
+- PENDING
+- BLOCKED
+
+Prevent double booking server-side.
+
+If drag/drop is implemented, update through secure backend logic and revalidate availability.
+
+Waitlist should support:
+- guest
+- email
+- phone
+- desired room
+- dates
+- guests
+- status
+- created date
+
+============================================================
+10. ROOM MANAGEMENT & PRICING
+============================================================
+
+Admin manages:
+- room type/name
+- description
+- price
+- capacity
+- total units
+- amenities
+- images where supported
+- status
+- availability
+
+Support where compatible:
+- base price
+- seasonal price
+- weekend price
+- special offer price
+
+Pricing must be calculated server-side.
+
+============================================================
+11. CUSTOMER CRM
+============================================================
+
+Customer profile:
+- name
+- email
+- phone
+- WhatsApp
+- verification
+- number of bookings
+- completed stays
+- upcoming stay
+- total spending
+- reviews
+- loyalty points
+- preferences
+
+Customer detail page:
+- profile
+- booking history
+- upcoming/past bookings
+- reviews
+- loyalty history
+- preferences
+
+Never expose passwords or auth secrets.
+
+============================================================
+12. STAFF / ROLE-BASED PERMISSIONS
+============================================================
+
+Implement secure RBAC.
+
+Possible roles:
+- SUPER_ADMIN
+- HOTEL_MANAGER
+- FRONT_DESK
+- HOUSEKEEPING
+- RESTAURANT
+- MARKETING
+
+Permissions can include:
+- VIEW_BOOKINGS
+- EDIT_BOOKINGS
+- DELETE_BOOKINGS
+- CONFIRM_BOOKINGS
+- MANAGE_ROOMS
+- MANAGE_RATES
+- MANAGE_CUSTOMERS
+- MANAGE_REVIEWS
+- MANAGE_OFFERS
+- MANAGE_GALLERY
+- MANAGE_MENU
+- VIEW_REPORTS
+- MANAGE_STAFF
+- MANAGE_SETTINGS
+
+Enforce permissions server-side.
+Do not rely on hiding frontend buttons.
+
+============================================================
+13. CMS
+============================================================
+
+Gallery:
+- add/edit/delete
+- category
+- publish/unpublish
+- reorder where practical
+
+Room content:
+- description
+- amenities
+- display information
+- pricing metadata
+- images where supported
+
+Restaurant menu if applicable:
+- categories
+- items
+- prices
+- descriptions
+- images
+- availability
+
+Offers:
+- title
+- description
+- discount
+- valid dates
+- coupon
+- terms
+- status
+
+SEO:
+- meta title
+- meta description
+- OG title/description/image
+- canonical URL
+
+Do not break existing public pages or SEO.
+
+============================================================
+14. REVIEWS ADMIN
+============================================================
+
+Admin:
+- view
+- search
+- filter by rating
+- publish
+- hide
+- delete
+- reply where supported
+
+Show:
+- average rating
+- rating distribution
+- review count
+- recent reviews
+
+============================================================
+15. PAYMENTS / FINANCE
+============================================================
+
+Preserve existing payment model.
+
+Current payment method can remain PAY AT HOTEL / CASH ON ARRIVAL.
+
+Do not invent transactions.
+
+Show:
+- booking reference
+- guest
+- amount
+- payment status
+- payment method
+- date
+
+Keep future payment gateway architecture modular.
+
+============================================================
+16. REPORTS
+============================================================
+
+Reports:
+- revenue
+- occupancy
+- bookings
+- cancellations
+- guests
+- room performance
+- payment status
+
+Date filters:
+- today
+- yesterday
+- last 7 days
+- last 30 days
+- this month
+- last month
+- custom range
+
+Use real Neon data.
+
+Support:
+- CSV
+- Excel
+- PDF where practical
+
+============================================================
+17. NOTIFICATIONS & WHATSAPP
+============================================================
+
+Preserve existing Gmail/Nodemailer.
+
+Notifications:
+- new booking
+- booking confirmation
+- cancellation
+- verification
+- password reset
+- review submitted
+
+WhatsApp hotel:
++9779843310613
+
+Guest:
+- WhatsApp Hotel
+- Send Booking Details
+
+Admin:
+- WhatsApp Guest
+
+Never send passwords, OTPs, database credentials or secrets through WhatsApp.
+
+============================================================
+18. GOOGLE LOGIN
+============================================================
+
+If Google OAuth is already configured, preserve it.
+
+If not configured, prepare architecture without breaking email/password login.
+
+Do not fake Google login.
+Do not ask for credentials.
+Use environment variables when available.
+
+============================================================
+19. RESTAURANT
+============================================================
+
+If restaurant functionality already exists, support:
+- tables
+- capacity
+- status
+- reservations
+- date/time
+- guest count
+
+Do not create fake restaurant ordering.
+
+============================================================
+20. SECURITY
+============================================================
+
+Never expose:
+- DATABASE_URL
+- SMTP_PASS
+- BETTER_AUTH_SECRET
+- ADMIN_PASSWORD
+- OAuth secrets
+
+Never return passwords.
+Never log secrets.
+Never store plaintext passwords.
+
+Prevent:
+- guest A accessing guest B
+- unauthorized admin API access
+- unauthorized staff actions
+- invalid booking dates
+- double booking
+- client-side price manipulation
+
+Use server-side validation, authorization and database constraints.
+
+============================================================
+21. AI CONCIERGE
+============================================================
+
+Do NOT break existing AI Concierge.
+
+If it uses a shared booking function, keep using it.
+
+AI-created bookings must:
+- save to Neon
+- receive booking reference
+- respect availability
+- associate logged-in user when possible
+- send guest email when available
+- send owner/admin notification
+- appear in admin
+- appear in guest account when associated
+
+Do not create a second booking implementation.
+
+============================================================
+22. MOBILE RESPONSIVENESS
+============================================================
+
+Everything must work on:
+- mobile
+- tablet
+- desktop
+
+Especially:
+- guest portal
+- admin dashboard
+- sidebar
+- tables
+- calendar
+- charts
+- forms
+- reviews
+- reports
+- modals
+
+No horizontal overflow.
+No clipped content.
+No tiny touch targets.
+
+Admin sidebar on mobile:
+- slide-out
+- overlay
+- close button
+- smooth animation
+
+Guest portal:
+- polished mobile navigation
+- touch-friendly cards/buttons
+
+============================================================
+23. DESIGN QUALITY
+============================================================
+
+Keep Hotel Swornim Namobuddha's current visual identity.
+
+Use:
+- premium typography
+- Himalayan luxury aesthetic
+- refined brass/gold accents
+- sophisticated tones
+- elegant light mode
+- premium cards
+- subtle borders
+- controlled glass effects
+- professional tables
+- professional charts
+- tasteful micro-interactions
+
+Do not:
+- rebuild public pages
+- use generic admin templates
+- overuse gradients
+- make everything huge
+- over-round everything
+- overanimate
+
+Guest Portal = luxury hotel member experience.
+Admin = professional hotel PMS.
+
+============================================================
+24. DATA INTEGRITY
+============================================================
+
+Logged-in guest booking relationship:
+
+USER
+ ↓
+BOOKING
+ ↓
+ROOM
+ ↓
+ADMIN PMS
+ ↓
+CRM
+ ↓
+REPORTS
+
+The same persistent booking must appear in:
+- Guest Dashboard
+- Admin Dashboard
+- Customer CRM
+- Reports
+
+If guest logs out and logs back in:
+- same account
+- same user ID
+- same bookings
+- same loyalty history
+- same reviews
+- same favorites
+
+No duplicate accounts.
+
+============================================================
+25. EMPTY / LOADING / ERROR STATES
+============================================================
+
+Create premium empty states:
+- No bookings
+- No reviews
+- No favorites
+- No loyalty activity
+- No arrivals
+- No pending reviews
+- No rooms available
+
+Use:
+- loading skeletons
+- error states
+- retry actions
+- success messages
+- confirmation dialogs
+
+Do not show fake records.
+
+============================================================
+26. PERFORMANCE
+============================================================
+
+Keep performance high.
+
+Use server components/server actions/API routes appropriately.
+Paginate large admin tables.
+Avoid unnecessary client fetching.
+Optimize images with existing Next.js strategy.
+Avoid expensive queries.
+Add indexes where needed.
+
+============================================================
+27. IMPLEMENTATION ORDER
+============================================================
+
+1. Inspect existing architecture.
+2. Identify existing functionality.
+3. Reuse existing tables/components/actions.
+4. Add only missing database structures.
+5. Implement secure server-side data access.
+6. Implement RBAC.
+7. Upgrade Guest Portal.
+8. Upgrade Admin PMS.
+9. Implement CRM.
+10. Implement Reviews.
+11. Implement Loyalty.
+12. Implement CMS.
+13. Implement Reports.
+14. Connect everything to real Neon data.
+15. Test mobile.
+16. Test security.
+17. Run production build.
+
+============================================================
+28. NO FAKE FUNCTIONALITY
+============================================================
+
+If a button exists, it must work.
+
+If a chart exists, use real data.
+If a statistic exists, calculate it.
+If a review says published, persist it.
+If loyalty points are shown, retrieve them from the loyalty system.
+If admin changes a booking, update Neon.
+If guest changes a preference, persist it.
+
+Do not create decorative fake functionality.
+
+If something cannot safely be implemented with the current architecture, do not fake it.
+
+============================================================
+29. FINAL TESTING
+============================================================
+
+Verify:
+
+AUTH:
+- signup
+- login
+- logout
+- email verification
+- forgot password
+- reset password
+- duplicate email handling
+- session persistence
+
+GUEST:
+- profile
+- preferences
+- bookings
+- booking details
+- booking history
+- favorites
+- reviews
+- loyalty
+- offers
+- security
+
+BOOKING:
+- new booking
+- existing booking flow
+- availability
+- double-booking prevention
+- guest association
+- admin visibility
+- email notification
+- WhatsApp details
+
+ADMIN:
+- authentication
+- roles
+- permissions
+- dashboard
+- analytics
+- front desk
+- bookings
+- calendar
+- rooms
+- availability
+- customers
+- reviews
+- loyalty
+- CMS
+- offers
+- reports
+- staff
+
+SECURITY:
+- guest isolation
+- admin protection
+- staff permissions
+- secret protection
+- password protection
+
+MOBILE:
+- guest
+- admin
+- tables
+- calendar
+- forms
+- navigation
+- modals
+
+BUILD:
+- TypeScript
+- production build
+- no broken imports
+- no hydration errors
+- no obvious console errors
+- no broken routes
+
+============================================================
+FINAL ACCEPTANCE CRITERIA
+============================================================
+
+PUBLIC WEBSITE
+        ↓
+BOOKING ENGINE
+        ↓
+NEON DATABASE
+        ↓
+ ┌───────────────┬────────────────┐
+ ↓               ↓                ↓
+GUEST PORTAL    ADMIN PMS       CRM
+ ↓               ↓                ↓
+Reviews         Bookings        Guest history
+Loyalty         Rooms           Preferences
+Favorites       Availability    Loyalty
+Offers          Front Desk      Reviews
+Profile         Reports
+                CMS
+                Staff/RBAC
+                Analytics
+
+Everything must use the same persistent Neon-backed data model.
+
+Most importantly:
+
+DO NOT replace the existing Hotel Swornim Namobuddha website.
+DO NOT remove existing working functionality.
+DO NOT create fake functionality.
+DO NOT ask for credentials.
+DO NOT ask questions during implementation.
+
+Inspect first, reuse the existing architecture, implement missing backend/data structures, then upgrade the UI.
+
+The final result should feel like a real production-ready premium Himalayan boutique hotel platform with a professional Guest Portal and professional Hotel PMS Admin Dashboard.
